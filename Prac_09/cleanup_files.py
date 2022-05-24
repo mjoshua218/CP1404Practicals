@@ -10,10 +10,8 @@ def main():
     """Demo os module functions."""
     print("Starting directory is: {}".format(os.getcwd()))
 
-    # Change to desired directory
     os.chdir('Lyrics/Christmas')
 
-    # Print a list of all files in current directory
     print("Files in {}:\n{}\n".format(os.getcwd(), os.listdir('.')))
 
     try:
@@ -21,7 +19,6 @@ def main():
     except FileExistsError:
         pass
 
-    # Loop through each file in the (current) directory
     for filename in os.listdir('.'):
         if os.path.isdir(filename):
             continue
